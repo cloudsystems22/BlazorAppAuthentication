@@ -1,0 +1,29 @@
+﻿@inherits LayoutComponentBase
+@inject IAuthServices authService
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <AuthorizeView>
+                <NotAuthorized>
+                    <a href="login">Login</a>
+                    <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+                </NotAuthorized>
+                <Authorized>
+                    <a href="#!">Logado como: @context.User.Identity.Name</a>
+                    <a href="#!" onclick="@(async() => { await authService.LogOut(); })">Sair</a>
+                    <a href="https://docs.microsoft.com/aspnet/" target="_blank">Sobre</a>
+                </Authorized>
+            </AuthorizeView>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+

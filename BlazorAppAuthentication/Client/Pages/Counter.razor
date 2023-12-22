@@ -1,0 +1,25 @@
+﻿@page "/counter"
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<AuthorizeView>
+    <NotAuthorized>
+        <span>Você não está autorizado à visualizar o conteúdo dessa página!</span>
+    </NotAuthorized>
+    <Authorized>
+        <p>Logado como: @context.User.Identity.Name</p>
+        <p role="status">Current count: @currentCount</p>
+        <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+    </Authorized>
+</AuthorizeView>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

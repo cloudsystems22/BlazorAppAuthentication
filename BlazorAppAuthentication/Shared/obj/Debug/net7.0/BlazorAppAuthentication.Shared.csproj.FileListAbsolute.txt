@@ -1,0 +1,11 @@
+C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthentication\Shared\bin\Debug\net7.0\BlazorAppAuthentication.Shared.deps.json
+C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthentication\Shared\bin\Debug\net7.0\BlazorAppAuthentication.Shared.dll
+C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthentication\Shared\bin\Debug\net7.0\BlazorAppAuthentication.Shared.pdb
+C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthentication\Shared\obj\Debug\net7.0\BlazorAppAuthentication.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthentication\Shared\obj\Debug\net7.0\BlazorAppAuthentication.Shared.AssemblyInfoInputs.cache
+C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthentication\Shared\obj\Debug\net7.0\BlazorAppAuthentication.Shared.AssemblyInfo.cs
+C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthentication\Shared\obj\Debug\net7.0\BlazorAppAuthentication.Shared.csproj.CoreCompileInputs.cache
+C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthentication\Shared\obj\Debug\net7.0\BlazorAppAuthentication.Shared.dll
+C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthentication\Shared\obj\Debug\net7.0\refint\BlazorAppAuthentication.Shared.dll
+C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthentication\Shared\obj\Debug\net7.0\BlazorAppAuthentication.Shared.pdb
+C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthentication\Shared\obj\Debug\net7.0\ref\BlazorAppAuthentication.Shared.dll
