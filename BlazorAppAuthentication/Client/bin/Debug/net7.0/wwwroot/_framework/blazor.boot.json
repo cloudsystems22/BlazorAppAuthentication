@@ -200,15 +200,15 @@
       "mscorlib.dll": "sha256-X+o60j6cZnlI2vFFjdH81yYTAxx13\/wqnNSWTKbDsyw=",
       "netstandard.dll": "sha256-Cr6slBs\/R2v2t\/vecFDHbQHakbEhar0adYu0YemwiXI=",
       "System.Private.CoreLib.dll": "sha256-dDw5nzGJhW1jOjGfSJcs\/Mi4KQ+DZygXnoK+vJ+jHyk=",
-      "BlazorAppAuthentication.Shared.dll": "sha256-Gr2cULfq0ZeaShIG3LESHne6c8jT31GTkpjhxYv5\/\/k=",
-      "BlazorAppAuthentication.Client.dll": "sha256-drY5FUddMU0R2SeI5snt4xT9lRltDgD1quLI8Y6zCew="
+      "BlazorAppAuthentication.Shared.dll": "sha256-XkgZGN9hBCUo31emTbw4jIjeEPM969Zovg0cIiJWRGs=",
+      "BlazorAppAuthentication.Client.dll": "sha256-qeKUdSvwtjScdW5MaDOQEyqePc3fVkbpkWKH6ZKs1+g="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "BlazorAppAuthentication.Shared.pdb": "sha256-YnUV6uwaOmY1vFCApC7SBQuUvNkxybptImWAHi3K+xM=",
-      "BlazorAppAuthentication.Client.pdb": "sha256-mScb5ReDRylSo\/LR7Rnv7tv\/Lrd11Wh+mcUCXIi1E+E="
+      "BlazorAppAuthentication.Shared.pdb": "sha256-wuCQcpLkjvyFB5PSonmvjt3OqKbZjwSn4u8ORwvUJaA=",
+      "BlazorAppAuthentication.Client.pdb": "sha256-S1LKD5n0j6Qezk1s8BLZ3FU50ngqO4ihgd9pgt+xiLU="
     },
     "runtime": {
       "dotnet.7.0.11.l33r2ocysi.js": "sha256-RtIVigdAD1mUvR4pxoKyD8kcQgw4INP81v+PVSqkeQY=",

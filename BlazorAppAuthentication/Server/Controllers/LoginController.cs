@@ -38,8 +38,8 @@ namespace BlazorAppAuthentication.Server.Controllers
 
             var claims = new[]
             {
-                new Claim(ClaimTypes.Name, user.Email!),
-                new Claim(ClaimTypes.Role, role)
+                new Claim(ClaimTypes.Role, role),
+                new Claim(ClaimTypes.Name, user.Email!)
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSecurityKey"]));

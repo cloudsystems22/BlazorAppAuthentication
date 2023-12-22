@@ -3,6 +3,7 @@ using Blazored.LocalStorage;
 using System.Text;
 using System.Text.Json;
 using System.Net.Http.Headers;
+using System.Data;
 
 namespace BlazorAppAuthentication.Client.Services
 {
@@ -32,8 +33,15 @@ namespace BlazorAppAuthentication.Client.Services
                 return loginResult;
 
 
+            string role = string.Empty;
+            if (user.Email.Equals("agneloneto@gmail.com"))
+                role = "Admin";
+
+            if (user.Email.Equals("davidfico@gmail.com"))
+                role = "User";
+
             await _localStorage.SetItemAsync("authToken", loginResult.Token!);
-            ((CustomAuthStateProvider)_stateProvider).MarkUserAsAuthenticated(user.Email!);
+            ((CustomAuthStateProvider)_stateProvider).MarkUserAsAuthenticated(user.Email!, role);
 
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", loginResult.Token);
             return loginResult;

@@ -1,0 +1,39 @@
+﻿@inject IAuthServices authService
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<AuthorizeView>
+    <NotAuthorized>
+        <a href="login">Login</a>
+        <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+    </NotAuthorized>
+    <Authorized>
+        <a href="claims-principle-data">
+            @context.User.Identity!.Name - @role
+        </a>
+        <a href="/" onclick="@(async() => { await authService.LogOut(); })">Sair</a>
+        <a href="https://docs.microsoft.com/aspnet/" target="_blank">Sobre</a>
+    </Authorized>
+</AuthorizeView>
+
+@code {
+    private string authMessage = "The user is NOT authenticated.";
+    private string? role { get; set; }
+
+    [CascadingParameter]
+    private Task<AuthenticationState>? authenticationState { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (authenticationState is not null)
+        {
+            var authState = await authenticationState;
+            var user = authState?.User;
+            role = authState?.User.Claims.FirstOrDefault()!.Value;
+
+            if (user?.Identity is not null && user.Identity.IsAuthenticated)
+            {
+                authMessage = $"{user.Identity.Name} is authenticated.";
+            }
+        }
+    }
+}

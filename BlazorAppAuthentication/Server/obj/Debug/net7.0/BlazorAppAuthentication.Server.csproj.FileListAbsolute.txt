@@ -75,3 +75,6 @@ C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthent
 C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthentication\Server\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthentication\Server\bin\Debug\net7.0\Microsoft.OpenApi.dll
 C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthentication\Server\bin\Debug\net7.0\Blazored.LocalStorage.dll
+C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthentication\Server\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthentication\Server\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\a.david.fico.neto\source\repos\BlazorAppAuthentication\BlazorAppAuthentication\Server\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll

@@ -1,21 +1,49 @@
 ﻿@page "/login"
 
 @inject IAuthServices authService
+@inject AuthenticationStateProvider AuthenticationStateProvider
 @inject NavigationManager navigation
-<h3>LoginPage</h3>
 
-<EditForm Model="user" OnSubmit="HandleLogin">
-    <label for="username">Name</label>
-    <InputText id="username" @bind-Value="user.Email"/>
-    <label for="password">Password</label>
-    <InputText id="password" @bind-Value="user.Password" type="password" />
-    <button type="submit" class="btn btn-primary">Do it!</button>
-</EditForm>
+@if (ShowError)
+{
+    <div class="alert alert-danger">
+        <p>@Error</p>
+    </div>
+}
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Login</h5>
+        <EditForm Model="user" OnSubmit="HandleLogin">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            <div class="form-label">
+                <label for="username">Name</label>
+            </div>
+            <div class="form-text">
+                <InputText id="username" @bind-Value="user.Email" class="form-control"/>
+                <ValidationMessage For="@(() => user.Email)" />
+            </div>
+            <div class="form-label">
+                <label for="password">Password</label>
+            </div>
+            <div class="form-text">
+                <InputText id="password" @bind-Value="user.Password" type="password" class="form-control" />
+                <ValidationMessage For="@(() => user.Password)" />
+            </div>
+            <hr/>
+            <button type="submit" class="btn btn-primary">Do it!</button>
+        </EditForm>
+    </div>
+
+</div>
+
+
 
 @code {
     private UserDto user = new UserDto();
     private bool ShowError { get; set; }
-    private string Error { get; set; }
+    private string? Error { get; set; }
 
     async Task HandleLogin()
     {
@@ -23,11 +51,15 @@
         var result = await authService.Login(user);
 
         if (result.Sucessful)
+        {
+            StateHasChanged();
             navigation.NavigateTo("/");
-
+        }
         else
+        {
             Error = result.Error!;
             ShowError = true;
+        }
 
     }
 }

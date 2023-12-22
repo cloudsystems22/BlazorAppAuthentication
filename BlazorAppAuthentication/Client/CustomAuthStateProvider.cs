@@ -87,9 +87,9 @@ namespace BlazorAppAuthentication.Client
             return Convert.FromBase64String(base64);
         }
 
-        internal void MarkUserAsAuthenticated(string email)
+        internal void MarkUserAsAuthenticated(string email, string role)
         {
-            var authenticatedUser = new ClaimsPrincipal(new ClaimsIdentity(new[] { new Claim(ClaimTypes.Name, email) }, "authapi"));
+            var authenticatedUser = new ClaimsPrincipal(new ClaimsIdentity(new[] { new Claim(ClaimTypes.Name, email), new Claim(ClaimTypes.Role, role) }, "authapi"));
             var authState = Task.FromResult(new AuthenticationState(authenticatedUser));
             NotifyAuthenticationStateChanged(authState);
         }
